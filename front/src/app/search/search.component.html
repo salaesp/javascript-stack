@@ -1,0 +1,9 @@
+<mat-form-field style="padding: 13px;" class="example-form-field">
+    <mat-label>Search Games</mat-label>
+    <input matInput type="text" [(ngModel)]="gameName" (keyup.enter)="search()">
+    <button mat-button *ngIf="gameName" matSuffix mat-icon-button aria-label="Clear" (click)="gameName=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+<button mat-raised-button style="margin-left: 5px;" color="primary" (click)="search()">Search</button>
+<app-result [games]="gameResult"></app-result>

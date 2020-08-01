@@ -1,0 +1,18 @@
+<div style="padding: 13px;">
+    <mat-spinner *ngIf="games.length === 0"></mat-spinner>
+    <mat-grid-list cols="3">
+        <mat-grid-tile *ngFor="let game of games">
+            <mat-card style="margin-left:10px;">
+                <mat-card-header>
+                    <mat-card-title>{{game.name}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="{{game.image}}" alt="{{game.name}}">
+                <mat-card-content>
+                    <p>
+                        Released: {{game.releaseDate}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
