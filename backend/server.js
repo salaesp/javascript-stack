@@ -28,7 +28,7 @@ function RequiredParam(name) {
 
 function InternalServerError() {
   return {
-    message: "Missing required param"
+    message: "Internal server error"
   }
 }
 
